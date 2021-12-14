@@ -1,7 +1,6 @@
 package org.formacion;
 
 import java.util.Collection;
-import java.util.List;
 
 public interface Agrupador {
 
@@ -9,7 +8,7 @@ public interface Agrupador {
 	
 	int numeroElementos();
 
-	default void addAll(Collection collection) {
+	default void addAll(@SuppressWarnings("rawtypes") Collection collection) {
 		for (Object object : collection) {
 			this.add(object);
 		}
